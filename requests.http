@@ -23,3 +23,12 @@ Content-Type: application/json
 		"location":"Lille"
 }
 
+###
+POST http://localhost:3000/newTag
+Content-Type: application/json
+
+{
+		"name":"chat"
+}
+
+

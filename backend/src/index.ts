@@ -5,6 +5,7 @@ import { dataSource } from "./config/db";
 import { Ad } from "./entities/Ad";
 import { Category } from "./entities/Category";
 import cors from "cors";
+import { Tag } from "./entities/Tag";
 
 //const db = new sqlite3.Database("./the-good-corner.sqlite");
 
@@ -24,6 +25,29 @@ app.get("/categories", async (req, res) => {
     const categories = await Category.find();
     if (!categories.length) return res.status(404).send("No Categories found");
     return res.json(categories);
+  } catch (err) {
+    return res.status(500).send(err);
+  }
+});
+
+//recup tous les Tags
+app.get("/tags", async (req, res) => {
+  try {
+    const tags = await Tag.find();
+    if (!tags.length) return res.status(404).send("No Tags found");
+    return res.json(tags);
+  } catch (err) {
+    return res.status(500).send(err);
+  }
+});
+
+app.post("/newTag", async (req, res) => {
+  const { name } = req.body;
+  try {
+    const tag = new Tag();
+    tag.name = name;
+    tag.save();
+    return res.status(201).send();
   } catch (err) {
     return res.status(500).send(err);
   }

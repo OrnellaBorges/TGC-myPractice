@@ -6,8 +6,11 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   BeforeInsert,
+  ManyToMany,
+  JoinTable,
 } from "typeorm";
 import { Category } from "./Category";
+import { Tag } from "./Tag";
 
 @Entity()
 export class Ad extends BaseEntity {
@@ -51,4 +54,11 @@ export class Ad extends BaseEntity {
 
   @ManyToOne(() => Category, (category) => category.ads)
   category!: Category;
+
+  // Relation "many-to-many" avec l'entité Tag
+  // Une annonce peut avoir plusieurs tags
+  @ManyToMany(() => Tag, (tag) => tag.ads)
+  // Utilisation de @JoinTable() pour créer la table de jonction entre `Ad` et `Tag`
+  @JoinTable()
+  tags!: Tag[];
 }

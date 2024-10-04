@@ -1,11 +1,14 @@
 Keskona:
 
 - [frontend] main.tsx: router
+
 - [frontend] App.tsx: layout
+
 - [frontend] pages/RecentAds.tsx: liste d'annonces récentes
   - fetch depuis une api
   - utilisation de useState+useEffect
 - [frontend] src/pages/AdCreaForm.tsx: formulaire
+
 - [frontend] src/components/Header.tsx:
 
   - fetch depuis une api
@@ -27,7 +30,7 @@ KESKONFOUT:
   - envoyer données backend
   - ajouter des champs pour matcher la data du backend (Ad)
   - ajouter des champs pour Category > select composant
-  - ajouter des champs pour Tag
+  - ajouter des champs pour Tag >>> fetcher la liste des tags dans le composant
 
 Keskifofaire:
 
@@ -45,7 +48,7 @@ Keskifofaire:
   - browse
   - add
 - [backend] index.ts:
-- splitter les routes
+- splitter les routes ! REFACTO
 - [backend] Routes Category (BREAD)
 - read
 - edit

@@ -49,18 +49,33 @@ export default function AdCreateForm() {
       {formFields.map((el, index) => (
         <label key={index}>
           {el.label}:
-          <input className="text-field" name={el.name} type={el.type} />
+          <input
+            className="text-field"
+            name={el.name}
+            type={el.type}
+            placeholder="placeholder"
+          />
         </label>
       ))}
 
-      <select name="category">
-        {categories.map((category) => (
-          <option key={category.id} value={category.id}>
-            {category.name}
-          </option>
-        ))}
-      </select>
-      <button className="button">Create Ad</button>
+      <label htmlFor="">
+        Select Category:
+        <select name="category">
+          {categories.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.name}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label htmlFor="">
+        Selet Tags:
+        <select name="tag">
+          <option value={"optionValue"}>TagOption</option>
+        </select>
+      </label>
+      <button className="button">Publier</button>
     </form>
   );
 }

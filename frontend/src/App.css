@@ -157,6 +157,22 @@ h1 {
   display: grid;
   gap: 24px;
 }
+/*Form*/
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid green;
+  gap: 20px;
+}
+.form label {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 2px solid red;
+  gap: 10px;
+}
 
 @media screen and (min-width: 720px) {
   .mobile-short-label {
