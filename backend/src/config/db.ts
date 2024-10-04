@@ -8,7 +8,7 @@ export const dataSource = new DataSource({
   database: "./wild.sqlite",
   entities: [Ad, Category, Tag],
 
-  synchronize: true,
+  synchronize: false,
   migrations: ["./migrations/*.ts"],
   migrationsTableName: "migrations",
 

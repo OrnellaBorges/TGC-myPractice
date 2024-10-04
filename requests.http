@@ -7,7 +7,7 @@ GET http://localhost:3000/ads
 GET http://localhost:3000/ads/2
 
 ###
-DELETE http://localhost:3000/ads/2
+DELETE http://localhost:3000/ads/15
 
 ###
 POST http://localhost:3000/ads
@@ -23,12 +23,18 @@ Content-Type: application/json
 		"location":"Lille"
 }
 
+
+###
+GET http://localhost:3000/tags
+
+
+
 ###
 POST http://localhost:3000/newTag
 Content-Type: application/json
 
 {
-		"name":"chat"
+		"name":"MyTag"
 }
 
 

@@ -30,7 +30,16 @@ KESKONFOUT:
   - envoyer données backend
   - ajouter des champs pour matcher la data du backend (Ad)
   - ajouter des champs pour Category > select composant
-  - ajouter des champs pour Tag >>> fetcher la liste des tags dans le composant
+  - ajouter des champs pour Tag
+
+    > > > [backend] Entité Tag + routes (a faire avant pour pouvoir fetcher tags)
+    > > > fetcher la liste des tags dans le composant
+
+- [backend] Entité Tag
+
+- [backend] Routes Tag (BREAD)
+  - browse
+  - add ajouter des tag (post)
 
 Keskifofaire:
 
@@ -43,10 +52,6 @@ Keskifofaire:
 
   - ... tout ?
 
-- [backend] Entité Tag
-- [backend] Routes Tag (BREAD)
-  - browse
-  - add
 - [backend] index.ts:
 - splitter les routes ! REFACTO
 - [backend] Routes Category (BREAD)

@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-//recup toutes les categories
+//recup toutes les Categories
 app.get("/categories", async (req, res) => {
   try {
     const categories = await Category.find();
@@ -41,6 +41,7 @@ app.get("/tags", async (req, res) => {
   }
 });
 
+// route pour creer un nouveau tag
 app.post("/newTag", async (req, res) => {
   const { name } = req.body;
   try {
