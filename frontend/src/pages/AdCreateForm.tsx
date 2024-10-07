@@ -115,15 +115,16 @@ export default function AdCreateForm() {
       </label>
 
       <label htmlFor="">
-        Selet Tags:
-        <select name="tag">
-          <option value="value">Select your tag</option>
+        Select Tags:
+        <select name="tag" defaultValue="">
+          <option value="" disabled>
+            Select your tag
+          </option>
           {tags.map((tag) => (
             <option key={tag.id} value={tag.id}>
               {tag.name}
             </option>
           ))}
-          {/* <option value={"optionValue"}>TagOption</option> */}
         </select>
       </label>
       <button className="button">Publier</button>

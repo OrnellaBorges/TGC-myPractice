@@ -30,6 +30,30 @@ app.get("/categories", async (req, res) => {
   }
 });
 
+//recup toutes les annonce en fonction de id de leur category
+app.get("/categories", async (req, res) => {
+  try {
+    const categories = await Category.find();
+    if (!categories.length) return res.status(404).send("No Categories found");
+    return res.json(categories);
+  } catch (err) {
+    return res.status(500).send(err);
+  }
+});
+
+// route pour creer un nouveau tag
+app.post("/newCategory", async (req, res) => {
+  const { name } = req.body;
+  try {
+    const category = new Category();
+    category.name = name;
+    category.save();
+    return res.status(201).send();
+  } catch (err) {
+    return res.status(500).send(err);
+  }
+});
+
 //recup tous les Tags
 app.get("/tags", async (req, res) => {
   try {

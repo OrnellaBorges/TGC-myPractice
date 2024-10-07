@@ -73,9 +73,12 @@ function Header() {
         {categories.map((cat, id) => (
           <span key={cat.id}>
             {id > 0 && "•"}
-            <a href="/" className="category-navigation-link">
+            <Link
+              to={`/categories/${cat.id}`}
+              className="category-navigation-link"
+            >
               {cat.name}
-            </a>
+            </Link>
           </span>
         ))}
       </nav>

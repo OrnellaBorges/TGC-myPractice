@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AdDetail from "./pages/AdDetail.tsx";
 import RecentAds from "./components/RecentAds.tsx";
 import AdCreateForm from "./pages/AdCreateForm.tsx";
+import About from "./pages/About.tsx";
+import CategoryPage from "./pages/CategoryPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <p>About</p>,
+        element: <About />,
+      },
+      {
+        path: "/categories/:catId",
+        element: <CategoryPage />,
       },
       {
         path: "/form",

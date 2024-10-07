@@ -1,4 +1,4 @@
-Keskona:
+## Keskona:
 
 - [frontend] main.tsx: router
 
@@ -23,7 +23,7 @@ Keskona:
   - add
   - delete
 
-KESKONFOUT:
+## KESKONFOUT:
 
 - [frontend] src/pages/AdCreaForm.tsx:
 
@@ -38,10 +38,17 @@ KESKONFOUT:
 - [backend] Entité Tag
 
 - [backend] Routes Tag (BREAD)
+
   - browse
   - add ajouter des tag (post)
 
-Keskifofaire:
+  - [backend] Routes Category (BREAD)
+    - read
+    - edit
+    - add
+    - delete
+
+## Keskifofaire:
 
 - [frontend] src/components/AdCard.tsx:
   - ajout de la photo
@@ -55,10 +62,10 @@ Keskifofaire:
 - [backend] index.ts:
 - splitter les routes ! REFACTO
 - [backend] Routes Category (BREAD)
-- read
-- edit
-- add
-- delete
+  - read
+  - edit
+  - add
+  - delete
 - [backend] Routes Ad (BREAD)
   - edit
 - [backend] Routes Tag (BREAD)

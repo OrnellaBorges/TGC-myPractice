@@ -34,7 +34,19 @@ POST http://localhost:3000/newTag
 Content-Type: application/json
 
 {
-		"name":"MyTag"
+		"name":"MyTag2"
 }
 
+###
+GET http://localhost:3000/categories
 
+###
+POST http://localhost:3000/newCategory
+Content-Type: application/json
+
+{
+		"name":"MyCategoryTest"
+}
+
+###
+GET http://localhost:3000/ads?categoryId=2
